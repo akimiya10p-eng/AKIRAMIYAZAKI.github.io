@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <title>宮﨑 陽 | 就活ポートフォリオ</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="大阪公立大学 工学部で電子物理工学を学ぶ宮﨑陽の就職活動用ポートフォリオサイト。学園祭アーティストライブ企画、バンド活動、家庭教師などの経験を通じて培った突破力と巻き込み力を紹介。">
+  <meta name="description" content="大阪公立大学 工学部で電子物理工学を学ぶ宮﨑陽の就職活動用ポートフォリオサイト。学園祭アーティストライブ企画、バンド活動、家庭教師などの経験を通じて培った突破力と巻き込み力を紹介する。">
   <style>
     :root {
       --bg: #0f172a;
@@ -156,42 +156,53 @@
       text-decoration: none;
     }
 
-    .hero-card {
+    .hero-photo-card {
       border-radius: var(--radius);
       background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.2), transparent 55%),
                   linear-gradient(to bottom right, rgba(15, 23, 42, 0.98), rgba(15, 23, 42, 0.96));
-      padding: 16px 16px 14px;
+      padding: 18px 16px 14px;
       border: 1px solid rgba(148, 163, 184, 0.4);
       box-shadow: 0 14px 36px rgba(15, 23, 42, 0.9);
+      text-align: center;
       font-size: 12px;
     }
 
-    .hero-card-title {
-      font-size: 13px;
+    .hero-photo-wrapper {
+      margin-bottom: 10px;
+    }
+
+    .hero-photo {
+      width: 210px;
+      height: 210px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid rgba(56, 189, 248, 0.5);
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.9);
+      background: #020617;
+    }
+
+    .hero-name {
       font-weight: 600;
-      margin-bottom: 6px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      margin-bottom: 2px;
     }
 
-    .hero-chip {
-      font-size: 11px;
-      padding: 2px 8px;
-      border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.5);
+    .hero-role {
       color: var(--text-sub);
+      font-size: 11px;
+      margin-bottom: 6px;
     }
 
-    .hero-list {
+    .hero-mini {
       list-style: none;
       padding: 0;
       margin: 8px 0 0;
+      color: var(--text-sub);
+      text-align: left;
+      font-size: 11px;
     }
 
-    .hero-list li {
-      margin-bottom: 4px;
-      color: var(--text-sub);
+    .hero-mini li {
+      margin-bottom: 3px;
     }
 
     section {
@@ -289,6 +300,11 @@
       .hero {
         grid-template-columns: 1fr;
       }
+
+      .hero-photo {
+        width: 180px;
+        height: 180px;
+      }
     }
   </style>
 </head>
@@ -308,37 +324,42 @@
     <main>
       <!-- Hero -->
       <section class="hero">
+        <!-- 左側：テキスト -->
         <div>
           <div class="hero-tagline">Engineering × Entertainment × Education</div>
-          <h1 class="hero-title">挑戦したくなる「きっかけ」をつくる、工学部の学生。</h1>
+          <h1 class="hero-title">挑戦したくなる「きっかけ」をつくる、工学部の学生である。</h1>
           <p class="hero-sub">
             大阪公立大学 工学部 電子物理工学科3年の宮﨑陽である。<br>
             半導体・電磁気などの物理を学びながら、学園祭アーティストライブの企画運営責任者や
             ギターボーカルとして活動してきた。データと現場の熱量の両方を見て、
-            人が一歩踏み出したくなる仕掛けを考えることが得意である。
+            人が一歩踏み出したくなる仕掛けを考えることを得意としている。
           </p>
           <p class="hero-meta">
             志望領域：テレビ・配信を中心としたエンタメ／教育コンテンツの企画・制作・編成 など
           </p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#strengths">強みを見る</a>
-            <!-- 実際のリンクに差し替え -->
-            <a class="btn" href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a class="btn" href="https://github.com/akimiya10p-eng" target="_blank" rel="noopener noreferrer">GitHub</a>
             <a class="btn" href="https://x.com/" target="_blank" rel="noopener noreferrer">X（旧Twitter）</a>
-            <!-- エントリーシートPDFなどを置くならここ -->
-            <!-- <a class="btn" href="docs/ES_miyazaki.pdf" target="_blank">ES（PDF）</a> -->
           </div>
         </div>
-        <div class="hero-card">
-          <div class="hero-card-title">
-            一言で言うと
-            <span class="hero-chip">Summary</span>
+
+        <!-- 右側：写真＋簡易プロフィール -->
+        <div class="hero-photo-card">
+          <div class="hero-photo-wrapper">
+            <!-- ここに自分の写真を置く： images/profile.jpg をアップロードすること -->
+            <img
+              src="images/profile.jpg"
+              alt="プロフィール写真"
+              class="hero-photo"
+            />
           </div>
-          <ul class="hero-list">
-            <li>・工学×エンタメの両方に軸を持つ大学生</li>
-            <li>・赤字続きだった学園祭ライブを黒字化＆完売に立て直した企画責任者</li>
-            <li>・ギターボーカルとしてステージにも立つ、現場肌のプレイヤー</li>
-            <li>・「真面目な学び」をおもしろく伝えるコンテンツづくりに挑戦したい</li>
+          <div class="hero-name">宮﨑 陽 / Haru Miyazaki</div>
+          <div class="hero-role">大阪公立大学 工学部 電子物理工学科3年</div>
+          <ul class="hero-mini">
+            <li>・友好祭アーティストライブ企画 運営責任者</li>
+            <li>・軽音サークル ギターボーカル</li>
+            <li>・高校数学家庭教師（偏差値37 → 65）</li>
           </ul>
         </div>
       </section>
@@ -347,7 +368,7 @@
       <section id="profile">
         <h2>Profile</h2>
         <p class="section-description">
-          どんなバックグラウンドを持っていて、どんな価値観で動いている人間なのかを簡潔にまとめた。
+          どんなバックグラウンドを持ち、どのような価値観で動いている人間なのかを簡潔にまとめた。
         </p>
         <div class="card">
           <div class="card-title">基本情報</div>
@@ -370,7 +391,7 @@
       <section id="strengths">
         <h2>Strengths（強み）</h2>
         <p class="section-description">
-          自分がどんな場面で一番力を発揮できるのかを、「○○力」という形に落とし込んだ。
+          自分がどのような場面で一番力を発揮できるのかを、「○○力」という形で整理した。
         </p>
         <div class="grid">
           <div class="card">
@@ -379,8 +400,8 @@
             <p>
               毎年赤字だった学園祭アーティストライブを引き継ぎ、「撤退論」が出ている状況からの再建に挑戦した。
               ビラ配り中心の宣伝をやめ、SNS広告に予算を集中させる一方で、
-              出演者選定をデータ分析にもとづいて見直し、仲介業者を挟まず事務所と直接交渉。
-              その結果、2年連続で1167枚のチケットを完売し、黒字化を達成した。
+              出演者選定をデータ分析にもとづいて見直し、仲介業者を挟まず事務所と直接交渉した。
+              その結果、2年連続で1167枚のチケットを完売し、黒字化を達成することができた。
             </p>
           </div>
           <div class="card">
@@ -388,16 +409,16 @@
             <div class="card-meta">温度差のあるメンバーを、共通のゴールに向かわせる力</div>
             <p>
               実行委員会では、ライブに対する熱量が人によって大きく異なっていた。
-              そこで「この企画をやる意味」を言語化し、数字目標と「ここまでできたら誇れる」という感情面のゴールを共有。
-              タスクを細かく分解し、メンバーの得意分野に合わせてアサインしたことで、
-              最終的には「来年もこのチームでやりたい」と言ってもらえる状態まで持っていくことができた。
+              そこで「この企画をやる意味」を言語化し、数値目標と「ここまでできたら誇れる」という感情面のゴールを共有した。
+              タスクを細かく分解し、メンバーの得意分野に合わせて役割をアサインした結果、
+              「来年もこのチームでやりたい」と言ってもらえる状態まで組織の空気を変えることができた。
             </p>
           </div>
           <div class="card">
             <div class="card-title">翻訳力</div>
             <div class="card-meta">専門的な内容を、ワクワクする言葉に置き換える力</div>
             <p>
-              工学や物理の話は難しくなりがちだが、高校生への家庭教師や、サークルの友人に授業内容を説明する中で、
+              工学や物理の話は難しくなりがちであるが、高校生への家庭教師や、サークルの友人に授業内容を説明する中で、
               数式や理論を日常の例え話に変換して伝えることを意識してきた。
               将来的にはこの力を活かし、「科学や学びのテーマを、エンタメとして面白く見せるコンテンツ」をつくりたいと考えている。
             </p>
@@ -409,16 +430,17 @@
       <section id="experience">
         <h2>Experience</h2>
         <p class="section-description">
-          ガクチカや自己PRで触れることの多い経験を、少し俯瞰して見えるように整理した。
+          ガクチカや自己PRで触れることの多い経験を、俯瞰して見えるように整理した。
         </p>
         <div class="grid">
           <div class="card">
             <div class="card-title">学園祭アーティストライブ企画</div>
             <div class="card-meta">友好祭実行委員会 / 企画運営責任者</div>
             <p>
-              予算管理・出演者選定・広報・当日の運営まで、一連のプロセスを統括。
+              予算管理・出演者選定・広報・当日の運営まで、一連のプロセスを統括した。
               特に広報では、SNS広告の配信結果をもとにターゲットや訴求文を改善し続け、
               反応率の高いクリエイティブの傾向を掴んでいった。
+              企画全体のKPIを設定し、「どの施策が売上に貢献したか」を数字で振り返るようにしている。
             </p>
             <div class="tagline-list">
               <span class="tag">収支管理</span>
@@ -431,8 +453,8 @@
             <div class="card-title">ギターボーカルとしてのバンド活動</div>
             <div class="card-meta">軽音サークル / オリジナル曲制作</div>
             <p>
-              UNISON SQUARE GARDEN や羊文学などの影響を受けながら、オリジナル曲を制作。
-              歌詞やアレンジで「届いてほしい感情」をどう形にするかを試行錯誤している。
+              UNISON SQUARE GARDEN や羊文学などの影響を受けながら、オリジナル曲を制作している。
+              歌詞やアレンジで「届いてほしい感情」をどう形にするかを試行錯誤しており、
               ステージに立つ立場を経験したことで、「観客としての体験」を企画側として設計する際の視点にもつながっている。
             </p>
             <div class="tagline-list">
@@ -446,9 +468,9 @@
             <div class="card-title">高校数学の家庭教師</div>
             <div class="card-meta">偏差値37 → 65 / 同志社大学合格</div>
             <p>
-              基礎が抜け落ちていた生徒に対し、誤答の傾向を分類し、「どこでつまずくか」を構造的に分析。
-              週ごとに克服テーマを決め、理解度を小テストとグラフで可視化した。
-              結果として、数学への苦手意識が薄れ、「自分でもできる」という実感を持たせることができた。
+              基礎が抜け落ちていた生徒に対し、誤答の傾向を分類し、「どこでつまずくか」を構造的に分析した。
+              週ごとに克服テーマを決め、理解度を小テストとグラフで可視化することで、
+              数学への苦手意識をやわらげ、「自分でもできる」という実感につなげた。
             </p>
             <div class="tagline-list">
               <span class="tag">データでの可視化</span>
@@ -463,14 +485,14 @@
       <section id="vision">
         <h2>Vision / Will</h2>
         <p class="section-description">
-          なぜエンタメ業界を志望しているのか、どんなことを実現したいのかの「芯」の部分を簡潔にまとめた。
+          なぜエンタメ業界を志望しているのか、どのようなことを実現したいのかの「芯」の部分をまとめた。
         </p>
         <div class="card">
           <div class="card-title">「真面目なことを、ちゃんと面白く。」</div>
           <p>
             自分がやりたいことは、教育や科学、働き方など、本来は真面目なテーマを「面白く伝える」コンテンツをつくることである。
             若者の間には、「どうせ頑張っても報われない」「本気を出すのはダサい」という空気があると感じている。
-            その空気を少しでもやわらげ、「一歩踏み出したくなるきっかけ」になる番組や企画をつくりたい。
+            その空気を少しでもやわらげ、「一歩踏み出したくなるきっかけ」になる番組や企画をつくりたいと考えている。
           </p>
           <p>
             工学で培った論理的な思考と、音楽や学園祭で鍛えられた現場感覚・エンタメ感覚を掛け合わせることで、
@@ -483,16 +505,17 @@
       <section id="contact">
         <h2>Contact / Links</h2>
         <p class="section-description">
-          選考や面談の際などに、追加で何か資料が必要であれば、以下から連絡をしてほしい。
+          選考や面談の際などに、追加で何か資料が必要であれば、以下から連絡してほしい。
         </p>
         <div class="contact-box">
           <p>
             メール：<a href="mailto:your.mail@example.com">your.mail@example.com</a><br>
             X：<a href="https://x.com/" target="_blank" rel="noopener noreferrer">@your_account</a><br>
-            GitHub：<a href="https://github.com/" target="_blank" rel="noopener noreferrer">https://github.com/yourname</a>
+            GitHub：<a href="https://github.com/akimiya10p-eng" target="_blank" rel="noopener noreferrer">https://github.com/akimiya10p-eng</a>
           </p>
-          <!-- ESや企画書PDFを置くならこんな感じで -->
           <!--
+          ここにESや企画書PDFを置きたい場合は、docs/ 以下にPDFをアップしてリンクを足すとよい。
+
           <p>
             主な資料：<br>
             ・<a href="docs/ES_miyazaki.pdf" target="_blank">自己PR・ガクチカまとめ（PDF）</a><br>
