@@ -314,8 +314,9 @@
       <div class="logo">AKIRA MIYAZAKI</div>
       <nav>
         <a href="#profile">Profile</a>
+        <a href="#journey">My Journey</a>
         <a href="#strengths">Strengths</a>
-        <a href="#experience">Experience</a>
+        <a href="#experience">Previous Work</a>
         <a href="#vision">Vision</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -340,16 +341,16 @@
           <div class="hero-actions">
             <a class="btn btn-primary" href="#strengths">強みを見る</a>
             <a class="btn" href="https://github.com/akimiya10p-eng" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a class="btn" href="https://x.com/" target="_blank" rel="noopener noreferrer">X（旧Twitter）</a>
+            <a class="btn" href="https://x.com/Taki_Renya" target="_blank" rel="noopener noreferrer">X（@Taki_Renya）</a>
           </div>
         </div>
 
         <!-- 右側：写真＋簡易プロフィール -->
         <div class="hero-photo-card">
           <div class="hero-photo-wrapper">
-            <!-- ここに自分の写真を置く： images:YuukousaiSIGN.HEIC をアップロードすること -->
+            <!-- images/profile.jpg をリポジトリにアップロードして使う -->
             <img
-              src="images:YuukousaiSIGN.HEIC"
+              src="images/profile.jpg"
               alt="プロフィール写真"
               class="hero-photo"
             />
@@ -383,6 +384,46 @@
             <span class="tag">学園祭アーティストライブ</span>
             <span class="tag">ギターボーカル</span>
             <span class="tag">教育×エンタメ</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- My Journey -->
+      <section id="journey">
+        <h2>My Journey</h2>
+        <p class="section-description">
+          自分がどのように今の価値観や志向にたどり着いたのかを、いくつかのフェーズに分けてまとめた。
+        </p>
+
+        <div class="grid">
+          <div class="card">
+            <div class="card-title">幼少期〜高校｜「つくる」が好きだった</div>
+            <div class="card-meta">大阪府堺市で育つ</div>
+            <p>
+              小さい頃から、ギターやゲーム、Webコンテンツなど「自分でつくったもの」を人に見てもらうのが好きだった。
+              文化祭やイベントでは、クラスの出し物づくりにのめり込み、「どうすればウケるか」を考え続けていた。
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-title">大学前半｜工学と学園祭にのめり込む</div>
+            <div class="card-meta">大阪公立大学 工学部 電子物理工学科</div>
+            <p>
+              工学部で半導体や電磁気を学びつつ、友好祭実行委員会に参加。
+              「大学で一番盛り上がる瞬間をつくりたい」という思いから、アーティストライブ企画の運営に関わりはじめた。
+              この頃から、「数字」と「感情」の両方を見ながら企画を考えるようになった。
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-title">大学後半〜現在｜挑戦する人を増やしたい</div>
+            <div class="card-meta">学園祭ライブの再建・バンド活動・就活</div>
+            <p>
+              赤字続きだったアーティストライブ企画を引き継ぎ、構造から見直した経験を通じて、
+              「挑戦したい人の背中を押す場をつくりたい」という思いが強くなった。
+              ギターボーカルとしてステージに立つ側も経験しつつ、テレビ・エンタメ業界を志望し、
+              教育や学びを「ちゃんと面白く」伝える仕事に挑戦したいと考えている。
+            </p>
           </div>
         </div>
       </section>
@@ -426,14 +467,20 @@
         </div>
       </section>
 
-      <!-- Experience -->
+      <!-- Previous Work -->
       <section id="experience">
-        <h2>Experience</h2>
+        <h2>Previous Work</h2>
         <p class="section-description">
-          ガクチカや自己PRで触れることの多い経験を、俯瞰して見えるように整理した。
+          これまで注力してきたプロジェクトや活動を、「成果物」として整理した。
         </p>
         <div class="grid">
+          <!-- 学園祭ライブ -->
           <div class="card">
+            <img
+              src="images/work-fes-main.jpg"
+              alt="学園祭アーティストライブの写真"
+              style="width: 100%; border-radius: 10px; margin-bottom: 8px; object-fit: cover; max-height: 220px;"
+            />
             <div class="card-title">学園祭アーティストライブ企画</div>
             <div class="card-meta">友好祭実行委員会 / 企画運営責任者</div>
             <p>
@@ -442,14 +489,15 @@
               反応率の高いクリエイティブの傾向を掴んでいった。
               企画全体のKPIを設定し、「どの施策が売上に貢献したか」を数字で振り返るようにしている。
             </p>
-            <div class="tagline-list">
-              <span class="tag">収支管理</span>
-              <span class="tag">SNS広告</span>
-              <span class="tag">交渉</span>
-            </div>
           </div>
 
+          <!-- バンド活動 -->
           <div class="card">
+            <img
+              src="images/work-band-main.jpg"
+              alt="バンド活動の写真"
+              style="width: 100%; border-radius: 10px; margin-bottom: 8px; object-fit: cover; max-height: 220px;"
+            />
             <div class="card-title">ギターボーカルとしてのバンド活動</div>
             <div class="card-meta">軽音サークル / オリジナル曲制作</div>
             <p>
@@ -457,14 +505,15 @@
               歌詞やアレンジで「届いてほしい感情」をどう形にするかを試行錯誤しており、
               ステージに立つ立場を経験したことで、「観客としての体験」を企画側として設計する際の視点にもつながっている。
             </p>
-            <div class="tagline-list">
-              <span class="tag">作詞・作曲</span>
-              <span class="tag">ステージ経験</span>
-              <span class="tag">観客目線</span>
-            </div>
           </div>
 
+          <!-- 家庭教師 -->
           <div class="card">
+            <img
+              src="images/work-teacher-main.jpg"
+              alt="家庭教師のイメージ写真"
+              style="width: 100%; border-radius: 10px; margin-bottom: 8px; object-fit: cover; max-height: 220px;"
+            />
             <div class="card-title">高校数学の家庭教師</div>
             <div class="card-meta">偏差値37 → 65 / 同志社大学合格</div>
             <p>
@@ -472,11 +521,6 @@
               週ごとに克服テーマを決め、理解度を小テストとグラフで可視化することで、
               数学への苦手意識をやわらげ、「自分でもできる」という実感につなげた。
             </p>
-            <div class="tagline-list">
-              <span class="tag">データでの可視化</span>
-              <span class="tag">コーチング</span>
-              <span class="tag">信頼関係構築</span>
-            </div>
           </div>
         </div>
       </section>
@@ -509,8 +553,8 @@
         </p>
         <div class="contact-box">
           <p>
-            メール：<a href="mailto:your.mail@example.com">akimiya10p@gmail.com</a><br>
-            X：<a href="https://x.com/" target="_blank" rel="noopener noreferrer">@Taki_Renya</a><br>
+            メール：<a href="mailto:akimiya10p@gmail.com">akimiya10p@gmail.com</a><br>
+            X：<a href="https://x.com/Taki_Renya" target="_blank" rel="noopener noreferrer">@Taki_Renya</a><br>
             GitHub：<a href="https://github.com/akimiya10p-eng" target="_blank" rel="noopener noreferrer">https://github.com/akimiya10p-eng</a>
           </p>
           <!--
