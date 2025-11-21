@@ -4,28 +4,40 @@
   <meta charset="UTF-8" />
   <title>宮﨑 陽 | 就活ポートフォリオ</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="大阪公立大学 工学部で電子物理工学を学ぶ宮﨑陽の就職活動用ポートフォリオサイト。学園祭アーティストライブ企画、バンド活動、家庭教師などの経験を通じて培った突破力と巻き込み力を紹介する。">
+  <meta name="description" content="大阪公立大学 工学部で電子物理工学を学ぶ宮﨑陽の就職活動用ポートフォリオサイト。学園祭アーティストライブ企画、バンド活動、家庭教師、企画書・データ分析など、文字では伝わりきらない要素を写真・動画・ドキュメントでまとめている。">
+
+  <!-- OGP（SNSシェア用） -->
+  <meta property="og:title" content="宮﨑 陽 | 就活ポートフォリオ">
+  <meta property="og:description" content="学園祭アーティストライブの再建、バンド活動、家庭教師の経験を、写真・動画・企画書・データで伝えるポートフォリオサイト。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://akimiya10p-eng.github.io/">
+  <meta property="og:image" content="og-image.png">
+
   <style>
     :root {
-      --bg: #0f172a;
+      --bg: #020617;
       --bg-soft: #020617;
       --accent: #38bdf8;
       --accent-soft: #0ea5e9;
+      --accent-alt: #22c55e;
       --text-main: #e5e7eb;
       --text-sub: #9ca3af;
       --card: #020617;
       --border: #1f2937;
       --radius: 14px;
+      --shadow-soft: 0 10px 26px rgba(15, 23, 42, 0.9);
     }
 
     * {
       box-sizing: border-box;
+      scroll-behavior: smooth;
     }
 
     body {
       margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: radial-gradient(circle at top, #1e293b 0, #020617 55%);
+      background:
+        radial-gradient(circle at top, #1e293b 0, #020617 55%);
       color: var(--text-main);
       line-height: 1.7;
     }
@@ -40,10 +52,12 @@
     }
 
     .wrapper {
-      max-width: 960px;
+      max-width: 1120px;
       margin: 0 auto;
       padding: 20px 16px 64px;
     }
+
+    /* Header */
 
     header {
       display: flex;
@@ -55,8 +69,8 @@
       position: sticky;
       top: 0;
       backdrop-filter: blur(14px);
-      background: linear-gradient(to bottom, rgba(15, 23, 42, 0.94), rgba(15, 23, 42, 0.7), transparent);
-      z-index: 10;
+      background: linear-gradient(to bottom, rgba(15, 23, 42, 0.98), rgba(15, 23, 42, 0.82), transparent);
+      z-index: 20;
     }
 
     .logo {
@@ -65,27 +79,120 @@
       font-size: 16px;
     }
 
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: flex-end;
+    }
+
     nav a {
-      margin-left: 16px;
-      font-size: 13px;
+      font-size: 11px;
       color: var(--text-sub);
+      padding: 4px 9px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
     }
 
     nav a:hover {
       color: var(--accent);
+      border-color: rgba(56, 189, 248, 0.6);
+      background: rgba(15, 23, 42, 0.7);
+      text-decoration: none;
     }
 
     main {
       margin-top: 24px;
     }
 
+    /* 共通レイアウト */
+
+    section {
+      margin-bottom: 56px;
+    }
+
+    section h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .section-description {
+      font-size: 13px;
+      color: var(--text-sub);
+      margin-bottom: 16px;
+    }
+
+    .card {
+      background: rgba(15, 23, 42, 0.96);
+      border-radius: var(--radius);
+      padding: 14px 16px;
+      border: 1px solid rgba(31, 41, 55, 0.9);
+      box-shadow: var(--shadow-soft);
+      font-size: 13px;
+    }
+
+    .card-title {
+      font-weight: 600;
+      margin-bottom: 6px;
+      font-size: 14px;
+    }
+
+    .card-meta {
+      font-size: 12px;
+      color: var(--text-sub);
+      margin-bottom: 6px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 14px;
+    }
+
+    .tagline-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      font-size: 12px;
+      margin-top: 6px;
+    }
+
+    .tag {
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(55, 65, 81, 0.9);
+      color: var(--text-sub);
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 11px;
+      padding: 2px 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(55, 65, 81, 0.9);
+      background: rgba(15, 23, 42, 0.96);
+      color: var(--text-sub);
+    }
+
+    .badge-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: var(--accent);
+    }
+
     /* Hero */
+
     .hero {
       display: grid;
-      grid-template-columns: minmax(0, 2.1fr) minmax(0, 1.1fr);
+      grid-template-columns: minmax(0, 2.2fr) minmax(0, 1.1fr);
       gap: 28px;
       align-items: center;
-      margin-bottom: 40px;
+      margin-bottom: 48px;
     }
 
     .hero-tagline {
@@ -136,6 +243,7 @@
       text-decoration: none;
       color: var(--text-main);
       white-space: nowrap;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease, background 0.15s ease;
     }
 
     .btn-primary {
@@ -149,11 +257,28 @@
     .btn-primary:hover {
       filter: brightness(1.05);
       text-decoration: none;
+      transform: translateY(-1px);
+      box-shadow: 0 16px 34px rgba(56, 189, 248, 0.45);
+    }
+
+    .btn-outline {
+      border-color: rgba(148, 163, 184, 0.7);
+      background: rgba(15, 23, 42, 0.96);
+      color: var(--text-sub);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      transform: translateY(-1px);
+      box-shadow: 0 10px 26px rgba(15, 23, 42, 0.9);
     }
 
     .btn:hover {
       border-color: var(--accent);
       text-decoration: none;
+      transform: translateY(-1px);
+      box-shadow: 0 10px 26px rgba(15, 23, 42, 0.9);
     }
 
     .hero-photo-card {
@@ -205,63 +330,244 @@
       margin-bottom: 3px;
     }
 
-    section {
-      margin-bottom: 40px;
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 8px;
+      justify-content: center;
     }
 
-    section h2 {
-      font-size: 20px;
-      margin-bottom: 10px;
+    /* Timeline (Journey) */
+
+    .timeline {
+      position: relative;
+      margin-top: 10px;
+      padding-left: 18px;
     }
 
-    .section-description {
-      font-size: 13px;
-      color: var(--text-sub);
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 6px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, rgba(56, 189, 248, 0.8), transparent);
+    }
+
+    .timeline-item {
+      position: relative;
       margin-bottom: 16px;
     }
 
-    .card {
-      background: rgba(15, 23, 42, 0.96);
-      border-radius: var(--radius);
-      padding: 14px 16px;
-      border: 1px solid rgba(31, 41, 55, 0.9);
-      box-shadow: 0 10px 26px rgba(15, 23, 42, 0.9);
+    .timeline-dot {
+      position: absolute;
+      left: -2px;
+      top: 4px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--bg);
+      border: 2px solid var(--accent);
+      box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.2);
+    }
+
+    .timeline-title {
       font-size: 13px;
-    }
-
-    .card-title {
       font-weight: 600;
-      margin-bottom: 6px;
-      font-size: 14px;
+      margin-left: 18px;
+      margin-bottom: 2px;
     }
 
-    .card-meta {
-      font-size: 12px;
+    .timeline-meta {
+      font-size: 11px;
       color: var(--text-sub);
-      margin-bottom: 6px;
+      margin-left: 18px;
+      margin-bottom: 4px;
     }
 
-    .grid {
+    .timeline-body {
+      font-size: 13px;
+      margin-left: 18px;
+    }
+
+    /* Gallery */
+
+    .gallery-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 10px;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      border: 1px solid rgba(31, 41, 55, 0.9);
+      box-shadow: var(--shadow-soft);
+      background: #020617;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+      height: 150px;
+      transition: transform 0.25s ease, opacity 0.25s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.05);
+      opacity: 0.92;
+    }
+
+    .gallery-caption {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 6px 8px;
+      font-size: 11px;
+      background: linear-gradient(to top, rgba(15, 23, 42, 0.95), transparent);
+      color: #e5e7eb;
+    }
+
+    /* Media */
+
+    .media-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+      gap: 16px;
+    }
+
+    .media-card video,
+    .media-card iframe {
+      width: 100%;
+      border-radius: 14px;
+      border: 1px solid rgba(31, 41, 55, 0.9);
+      box-shadow: var(--shadow-soft);
+      background: #000;
+    }
+
+    /* Documents */
+
+    .doc-iframe {
+      width: 100%;
+      border-radius: 12px;
+      border: 1px solid rgba(31, 41, 55, 0.9);
+      background: #020617;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .doc-note {
+      font-size: 11px;
+      color: var(--text-sub);
+      margin-top: 4px;
+    }
+
+    /* Data & Metrics */
+
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
       gap: 14px;
     }
 
-    .tagline-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      font-size: 12px;
-      margin-top: 6px;
+    .metric-card {
+      border-radius: var(--radius);
+      padding: 14px 16px;
+      background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.14), transparent 55%);
+      border: 1px solid rgba(31, 41, 55, 0.9);
+      box-shadow: var(--shadow-soft);
+      font-size: 13px;
     }
 
-    .tag {
-      padding: 2px 8px;
-      border-radius: 999px;
-      background: rgba(15, 23, 42, 0.9);
-      border: 1px solid rgba(55, 65, 81, 0.9);
+    .metric-value {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .metric-label {
+      font-size: 12px;
+      color: var(--text-sub);
+      margin-bottom: 6px;
+    }
+
+    .metric-detail {
+      font-size: 12px;
       color: var(--text-sub);
     }
+
+    /* Process */
+
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+    }
+
+    .process-step-number {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin-bottom: 4px;
+    }
+
+    .process-step-title {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .process-step-body {
+      font-size: 13px;
+      color: var(--text-sub);
+    }
+
+    /* Skills */
+
+    .skills-columns {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 14px;
+    }
+
+    .skills-list {
+      list-style: none;
+      padding: 0;
+      margin: 6px 0 0;
+      font-size: 13px;
+    }
+
+    .skills-list li {
+      margin-bottom: 4px;
+    }
+
+    /* FAQ */
+
+    .faq-item {
+      border-radius: 12px;
+      border: 1px solid rgba(31, 41, 55, 0.9);
+      padding: 10px 12px;
+      margin-bottom: 8px;
+      background: rgba(15, 23, 42, 0.96);
+      box-shadow: 0 6px 18px rgba(15, 23, 42, 0.7);
+      font-size: 13px;
+    }
+
+    .faq-q {
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .faq-a {
+      color: var(--text-sub);
+    }
+
+    /* Contact */
 
     .contact-box {
       border-radius: var(--radius);
@@ -269,6 +575,7 @@
       border: 1px solid rgba(55, 65, 81, 0.9);
       padding: 14px 16px;
       font-size: 13px;
+      box-shadow: var(--shadow-soft);
     }
 
     footer {
@@ -280,6 +587,25 @@
       border-top: 1px solid rgba(30, 64, 175, 0.5);
     }
 
+    /* フェードイン */
+
+    .fade {
+      opacity: 0;
+      transform: translateY(8px);
+      transition: opacity 0.4s ease, transform 0.4s ease;
+    }
+
+    .fade.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 960px) {
+      .media-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
     @media (max-width: 720px) {
       header {
         flex-direction: column;
@@ -287,14 +613,7 @@
       }
 
       nav {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
-      }
-
-      nav a {
-        margin-left: 0;
-        margin-right: 10px;
+        justify-content: flex-start;
       }
 
       .hero {
@@ -314,18 +633,24 @@
       <div class="logo">AKIRA MIYAZAKI</div>
       <nav>
         <a href="#profile">Profile</a>
-        <a href="#journey">My Journey</a>
+        <a href="#journey">Journey</a>
         <a href="#strengths">Strengths</a>
-        <a href="#experience">Previous Work</a>
+        <a href="#works">Works</a>
+        <a href="#data">Data</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#media">Media</a>
+        <a href="#docs">Docs</a>
+        <a href="#process">Process</a>
+        <a href="#skills">Skills</a>
         <a href="#vision">Vision</a>
+        <a href="#faq">FAQ</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
 
     <main>
       <!-- Hero -->
-      <section class="hero">
-        <!-- 左側：テキスト -->
+      <section class="hero fade">
         <div>
           <div class="hero-tagline">Engineering × Entertainment × Education</div>
           <h1 class="hero-title">挑戦したくなる「きっかけ」をつくる、工学部の学生である。</h1>
@@ -339,16 +664,16 @@
             志望領域：テレビ・配信を中心としたエンタメ／教育コンテンツの企画・制作・編成 など
           </p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#strengths">強みを見る</a>
-            <a class="btn" href="https://github.com/akimiya10p-eng" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a class="btn" href="https://x.com/Taki_Renya" target="_blank" rel="noopener noreferrer">X（@Taki_Renya）</a>
+            <a class="btn btn-primary" href="#works">実績を見る</a>
+            <a class="btn btn-outline" href="#gallery">写真で見る</a>
+            <a class="btn btn-outline" href="#media">動画で見る</a>
+            <a class="btn" href="docs/resume_miyazaki.pdf" target="_blank" rel="noopener noreferrer">履歴書（PDF）</a>
           </div>
         </div>
 
-        <!-- 右側：写真＋簡易プロフィール -->
         <div class="hero-photo-card">
           <div class="hero-photo-wrapper">
-            <!-- images/profile.jpg をリポジトリにアップロードして使う -->
+            <!-- images/profile.jpg を用意する -->
             <img
               src="images/profile.jpg"
               alt="プロフィール写真"
@@ -362,77 +687,109 @@
             <li>・軽音サークル ギターボーカル</li>
             <li>・高校数学家庭教師（偏差値37 → 65）</li>
           </ul>
+          <div class="hero-badges">
+            <span class="badge"><span class="badge-dot"></span> 工学 × 企画・編成志望</span>
+            <span class="badge"><span class="badge-dot"></span> 教育×エンタメ 企画</span>
+          </div>
         </div>
       </section>
 
       <!-- Profile -->
-      <section id="profile">
+      <section id="profile" class="fade">
         <h2>Profile</h2>
         <p class="section-description">
           どんなバックグラウンドを持ち、どのような価値観で動いている人間なのかを簡潔にまとめた。
+          ESでは書ききれない文脈を補う前提で読んでもらえると嬉しい。
         </p>
-        <div class="card">
-          <div class="card-title">基本情報</div>
-          <div class="card-meta">大阪公立大学 工学部 電子物理工学科 / 友好祭実行委員会 / 軽音サークル</div>
-          <p>
-            工学の中でも電子・物性寄りの分野を専攻し、半導体デバイスや統計物理などを学んでいる。
-            一方で課外活動では、学園祭のアーティストライブ企画の運営責任者として、赤字続きだった企画の再建に挑戦してきた。
-            軽音サークルではギターボーカルとしてバンド活動を続けており、「つくる側」と「演じる側」の両方の視点を大事にしている。
-          </p>
-          <div class="tagline-list">
-            <span class="tag">電子物理工学</span>
-            <span class="tag">学園祭アーティストライブ</span>
-            <span class="tag">ギターボーカル</span>
-            <span class="tag">教育×エンタメ</span>
+        <div class="grid">
+          <div class="card">
+            <div class="card-title">基本情報</div>
+            <div class="card-meta">大阪公立大学 工学部 電子物理工学科 / 友好祭実行委員会 / 軽音サークル</div>
+            <p>
+              工学の中でも電子・物性寄りの分野を専攻し、半導体デバイス・電磁気学・統計物理などを学んでいる。
+              仕組みや構造を論理的に理解することを好む一方で、「難しいことをどう面白く伝えるか」という視点にも強く惹かれてきた。
+            </p>
+            <p>
+              課外活動では、学園祭のアーティストライブ企画の運営責任者として、赤字続きだった企画の再建に挑戦した。
+              軽音サークルではギターボーカルとしてバンド活動を続けており、「つくる側」と「演じる側」の両方の視点を大事にしている。
+            </p>
+            <div class="tagline-list">
+              <span class="tag">電子物理工学</span>
+              <span class="tag">学園祭アーティストライブ</span>
+              <span class="tag">ギターボーカル</span>
+              <span class="tag">教育×エンタメ</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-title">自分を一言で表すと</div>
+            <p>
+              「数字と熱量の両方から企画を組み立てるタイプのエンジニア気質の企画屋」である。
+              物理・工学で鍛えた論理性をベースにしつつ、ライブハウスや学園祭で感じてきた
+              “現場の空気”を重視して、どちらか一方に偏らない意思決定を心がけている。
+            </p>
+            <p>
+              その意味で、自分は「完全にテレビ人」でも「完全に研究者」でもなく、
+              その間を行き来しながら、新しい形のエンタメと教育の接点を探している人間だと思っている。
+            </p>
           </div>
         </div>
       </section>
 
-      <!-- My Journey -->
-      <section id="journey">
+      <!-- My Journey（タイムライン） -->
+      <section id="journey" class="fade">
         <h2>My Journey</h2>
         <p class="section-description">
-          自分がどのように今の価値観や志向にたどり着いたのかを、いくつかのフェーズに分けてまとめた。
+          自分がどのように今の価値観や志向にたどり着いたのかを、簡単なタイムラインでまとめた。
+          履歴書には書き切れない「流れ」を伝えたい。
         </p>
 
-        <div class="grid">
-          <div class="card">
-            <div class="card-title">幼少期〜高校｜「つくる」が好きだった</div>
-            <div class="card-meta">大阪府堺市で育つ</div>
-            <p>
-              小さい頃から、ギターやゲーム、Webコンテンツなど「自分でつくったもの」を人に見てもらうのが好きだった。
-              文化祭やイベントでは、クラスの出し物づくりにのめり込み、「どうすればウケるか」を考え続けていた。
-            </p>
-          </div>
+        <div class="card">
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-title">幼少期〜高校｜「つくる」が好きだった</div>
+              <div class="timeline-meta">大阪府堺市で育つ</div>
+              <div class="timeline-body">
+                小さい頃から、ギターやゲーム、Webコンテンツなど「自分でつくったもの」を人に見てもらうのが好きだった。
+                文化祭やイベントでは、クラスの出し物づくりにのめり込み、「どうすればウケるか」を考え続けていた。
+                ここで「自分が仕掛けたもので、人が笑ったり驚いたりする感覚」が好きなのだと自覚した。
+              </div>
+            </div>
 
-          <div class="card">
-            <div class="card-title">大学前半｜工学と学園祭にのめり込む</div>
-            <div class="card-meta">大阪公立大学 工学部 電子物理工学科</div>
-            <p>
-              工学部で半導体や電磁気を学びつつ、友好祭実行委員会に参加。
-              「大学で一番盛り上がる瞬間をつくりたい」という思いから、アーティストライブ企画の運営に関わりはじめた。
-              この頃から、「数字」と「感情」の両方を見ながら企画を考えるようになった。
-            </p>
-          </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-title">大学前半｜工学と学園祭にのめり込む</div>
+              <div class="timeline-meta">大阪公立大学 工学部 電子物理工学科</div>
+              <div class="timeline-body">
+                工学部で半導体や電磁気を学びつつ、友好祭実行委員会に参加。
+                「大学で一番盛り上がる瞬間をつくりたい」という思いから、アーティストライブ企画の運営に関わりはじめた。
+                この頃から、「数字」と「感情」の両方を見ながら企画を考えるようになり、
+                ただ楽しいだけでなく、きちんと成立するイベント運営に興味を持ち始めた。
+              </div>
+            </div>
 
-          <div class="card">
-            <div class="card-title">大学後半〜現在｜挑戦する人を増やしたい</div>
-            <div class="card-meta">学園祭ライブの再建・バンド活動・就活</div>
-            <p>
-              赤字続きだったアーティストライブ企画を引き継ぎ、構造から見直した経験を通じて、
-              「挑戦したい人の背中を押す場をつくりたい」という思いが強くなった。
-              ギターボーカルとしてステージに立つ側も経験しつつ、テレビ・エンタメ業界を志望し、
-              教育や学びを「ちゃんと面白く」伝える仕事に挑戦したいと考えている。
-            </p>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-title">大学後半〜現在｜挑戦する人を増やしたい</div>
+              <div class="timeline-meta">学園祭ライブの再建・バンド活動・就活</div>
+              <div class="timeline-body">
+                赤字続きだったアーティストライブ企画を引き継ぎ、構造から見直した経験を通じて、
+                「挑戦したい人の背中を押す場をつくりたい」という思いが強くなった。
+                ギターボーカルとしてステージに立つ側も経験しつつ、テレビ・エンタメ業界を志望し、
+                教育や学びを「ちゃんと面白く」伝える仕事に挑戦したいと考えている。
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       <!-- Strengths -->
-      <section id="strengths">
+      <section id="strengths" class="fade">
         <h2>Strengths（強み）</h2>
         <p class="section-description">
           自分がどのような場面で一番力を発揮できるのかを、「○○力」という形で整理した。
+          ESの文章だけでは伝わりづらいニュアンスも含めて書いている。
         </p>
         <div class="grid">
           <div class="card">
@@ -444,6 +801,10 @@
               出演者選定をデータ分析にもとづいて見直し、仲介業者を挟まず事務所と直接交渉した。
               その結果、2年連続で1167枚のチケットを完売し、黒字化を達成することができた。
             </p>
+            <p>
+              ここで学んだのは、「根本のルールを変えない限り、状況は本質的には変わらない」ということだ。
+              小手先の努力ではなく、企画の前提そのものを疑いにいくことを恐れない。
+            </p>
           </div>
           <div class="card">
             <div class="card-title">巻き込み力</div>
@@ -454,6 +815,10 @@
               タスクを細かく分解し、メンバーの得意分野に合わせて役割をアサインした結果、
               「来年もこのチームでやりたい」と言ってもらえる状態まで組織の空気を変えることができた。
             </p>
+            <p>
+              人は「やらされている」と感じると動かないが、「自分ごと」として納得できれば驚くほど力を出す。
+              そのスイッチを押すための言葉選びや場づくりに、かなりこだわるタイプである。
+            </p>
           </div>
           <div class="card">
             <div class="card-title">翻訳力</div>
@@ -461,17 +826,22 @@
             <p>
               工学や物理の話は難しくなりがちであるが、高校生への家庭教師や、サークルの友人に授業内容を説明する中で、
               数式や理論を日常の例え話に変換して伝えることを意識してきた。
+              誤答の傾向を分類し、「どこでつまずくか」を構造的に捉えた上で、本人の興味に近い例えへと翻訳する。
+            </p>
+            <p>
               将来的にはこの力を活かし、「科学や学びのテーマを、エンタメとして面白く見せるコンテンツ」をつくりたいと考えている。
+              専門性とポップさの橋渡し役のような存在でありたい。
             </p>
           </div>
         </div>
       </section>
 
-      <!-- Previous Work -->
-      <section id="experience">
-        <h2>Previous Work</h2>
+      <!-- Works（実績） -->
+      <section id="works" class="fade">
+        <h2>Previous Work（主な実績）</h2>
         <p class="section-description">
           これまで注力してきたプロジェクトや活動を、「成果物」として整理した。
+          詳細はそれぞれ写真・動画・企画書とも連動させている。
         </p>
         <div class="grid">
           <!-- 学園祭ライブ -->
@@ -489,6 +859,17 @@
               反応率の高いクリエイティブの傾向を掴んでいった。
               企画全体のKPIを設定し、「どの施策が売上に貢献したか」を数字で振り返るようにしている。
             </p>
+            <div class="tagline-list">
+              <span class="tag">#ライブ企画</span>
+              <span class="tag">#SNS広告</span>
+              <span class="tag">#交渉</span>
+              <span class="tag">#収支管理</span>
+            </div>
+            <p style="font-size:11px; color:var(--text-sub); margin-top:6px;">
+              写真：<a href="#gallery">Galleryセクション</a><br>
+              動画：<a href="#media">Mediaセクション</a><br>
+              企画書：<a href="#docs">Documentsセクション</a> から閲覧できる。
+            </p>
           </div>
 
           <!-- バンド活動 -->
@@ -505,6 +886,15 @@
               歌詞やアレンジで「届いてほしい感情」をどう形にするかを試行錯誤しており、
               ステージに立つ立場を経験したことで、「観客としての体験」を企画側として設計する際の視点にもつながっている。
             </p>
+            <p>
+              ライブのMCやセットリスト構成を考える過程で、
+              「感情の起伏をどう設計するか」という感覚が磨かれたと感じている。
+            </p>
+            <div class="tagline-list">
+              <span class="tag">#作詞作曲</span>
+              <span class="tag">#ライブ演出</span>
+              <span class="tag">#観客目線</span>
+            </div>
           </div>
 
           <!-- 家庭教師 -->
@@ -521,12 +911,291 @@
               週ごとに克服テーマを決め、理解度を小テストとグラフで可視化することで、
               数学への苦手意識をやわらげ、「自分でもできる」という実感につなげた。
             </p>
+            <p>
+              この経験は、コンテンツ制作においても「どこで視聴者が離脱するか」を考える感覚と強くつながっていると感じている。
+            </p>
+            <div class="tagline-list">
+              <span class="tag">#データ可視化</span>
+              <span class="tag">#コーチング</span>
+              <span class="tag">#信頼関係</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Data & Metrics -->
+      <section id="data" class="fade">
+        <h2>Data & Metrics（数字で見る自分）</h2>
+        <p class="section-description">
+          ESでは文字が中心になるが、ここではできる限り「数字」で自分の活動を切り取った。
+          厳密な統計というより、意思決定に使ってきた指標のイメージである。
+        </p>
+        <div class="metrics-grid">
+          <div class="metric-card">
+            <div class="metric-value">1167 枚 × 2年</div>
+            <div class="metric-label">学園祭アーティストライブ チケット完売</div>
+            <div class="metric-detail">
+              2年間連続で、1167枚のチケットを完売。
+              事前の販売ペースを週次で追い、広告予算の増減やクリエイティブの差し替えを行った。
+            </div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value">赤字 → 黒字</div>
+            <div class="metric-label">ライブ企画の収支構造の転換</div>
+            <div class="metric-detail">
+              毎年大幅な赤字だった企画を、宣伝手段と出演者選定・契約形態の見直しにより黒字化。
+              「どこにお金をかけるべきか」をゼロベースで再設計した。
+            </div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value">37 → 65</div>
+            <div class="metric-label">家庭教師での偏差値の伸び（進研模試・数学）</div>
+            <div class="metric-detail">
+              生徒の誤答パターンを分類し、毎回の小テストで理解度を可視化。
+              「感覚」ではなく、「見える数字」で成長を共有することにこだわった。
+            </div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value">3 軸</div>
+            <div class="metric-label">自分の活動を支える要素</div>
+            <div class="metric-detail">
+              ① 工学的な思考力（構造理解）<br>
+              ② エンタメ的な感性（観客目線）<br>
+              ③ 教育的な視点（学び・成長）<br>
+              この3つの軸をどう掛け合わせるかを常に考えている。
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Gallery（写真） -->
+      <section id="gallery" class="fade">
+        <h2>Gallery（写真で見る現場）</h2>
+        <p class="section-description">
+          文字だけでは伝わらない、現場の空気感や温度感を写真でまとめた。
+          実際の雰囲気をイメージしてもらえればと思う。
+        </p>
+        <div class="gallery-grid">
+          <!-- ここに使いたい写真を差し替え -->
+          <div class="gallery-item">
+            <img src="images/gallery-fes-crowd.jpg" alt="満員の学園祭ライブ会場">
+            <div class="gallery-caption">学園祭アーティストライブ本番のフロアの様子</div>
+          </div>
+          <div class="gallery-item">
+            <img src="images/gallery-fes-stage.jpg" alt="ステージと照明">
+            <div class="gallery-caption">照明・転換を含めたステージ周りの調整</div>
+          </div>
+          <div class="gallery-item">
+            <img src="images/gallery-fes-backstage.jpg" alt="バックステージの様子">
+            <div class="gallery-caption">バックステージでのスタッフ打ち合わせ</div>
+          </div>
+          <div class="gallery-item">
+            <img src="images/gallery-band-live.jpg" alt="バンドのライブ写真">
+            <div class="gallery-caption">軽音サークルでのライブ（ギターボーカルとして出演）</div>
+          </div>
+          <div class="gallery-item">
+            <img src="images/gallery-guitar.jpg" alt="ギターの写真">
+            <div class="gallery-caption">普段使用しているギターと練習風景</div>
+          </div>
+          <div class="gallery-item">
+            <img src="images/gallery-teacher.jpg" alt="家庭教師の勉強風景（イメージ）">
+            <div class="gallery-caption">家庭教師としての指導風景（再現・イメージ）</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Media（動画） -->
+      <section id="media" class="fade">
+        <h2>Media（動画）</h2>
+        <p class="section-description">
+          ライブの雰囲気や企画の様子など、動画でしか伝わらない部分をまとめた。
+          音量に注意して再生してほしい。
+        </p>
+        <div class="media-grid">
+          <div class="card media-card">
+            <div class="card-title">学園祭アーティストライブ ダイジェスト</div>
+            <div class="card-meta">会場の熱量や、転換の雰囲気が伝わる映像</div>
+            <!-- videos/fes-digest.mp4 をアップして差し替える -->
+            <video controls poster="images/work-fes-main.jpg">
+              <source src="videos/fes-digest.mp4" type="video/mp4">
+              利用中のブラウザでは動画が再生できないようである。<br>
+              <a href="videos/fes-digest.mp4">こちらから直接ダウンロード</a>して再生してほしい。
+            </video>
+          </div>
+
+          <div class="card media-card">
+            <div class="card-title">バンド ライブ映像（ショート）</div>
+            <div class="card-meta">ギターボーカルとしてのステージの一部</div>
+            <!-- videos/band-live-short.mp4 をアップして差し替える -->
+            <video controls poster="images/gallery-band-live.jpg">
+              <source src="videos/band-live-short.mp4" type="video/mp4">
+              利用中のブラウザでは動画が再生できないようである。<br>
+              <a href="videos/band-live-short.mp4">こちらから直接ダウンロード</a>して再生してほしい。
+            </video>
+          </div>
+        </div>
+      </section>
+
+      <!-- Documents（企画書・PDF） -->
+      <section id="docs" class="fade">
+        <h2>Documents（企画書・資料）</h2>
+        <p class="section-description">
+          企画や分析を「形」にしたドキュメント類をまとめた。
+          簡単に中身が見えるよう、ブラウザ内のプレビューとPDFダウンロードリンクを用意している。
+        </p>
+        <div class="grid">
+          <div class="card">
+            <div class="card-title">学園祭アーティストライブ 企画書</div>
+            <div class="card-meta">構成案／収支シミュレーション／ターゲット設定 など</div>
+            <!-- docs/plan_live.pdf をアップして差し替える -->
+            <iframe
+              src="docs/plan_live.pdf"
+              class="doc-iframe"
+              height="260"
+            ></iframe>
+            <p class="doc-note">
+              ※PDFが表示されない場合は
+              <a href="docs/plan_live.pdf" target="_blank" rel="noopener noreferrer">こちら</a>
+              から直接開いてほしい。
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-title">教育×エンタメ企画案</div>
+            <div class="card-meta">若者の挑戦を後押しする番組企画 など</div>
+            <!-- docs/plan_edu_entertainment.pdf をアップして差し替える -->
+            <iframe
+              src="docs/plan_edu_entertainment.pdf"
+              class="doc-iframe"
+              height="260"
+            ></iframe>
+            <p class="doc-note">
+              ※PDFが表示されない場合は
+              <a href="docs/plan_edu_entertainment.pdf" target="_blank" rel="noopener noreferrer">こちら</a>
+              から直接開いてほしい。
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-title">家庭教師での成績推移グラフ</div>
+            <div class="card-meta">模試偏差値の推移／誤答分析のサマリー</div>
+            <!-- docs/teacher_progress.pdf をアップして差し替える -->
+            <iframe
+              src="docs/teacher_progress.pdf"
+              class="doc-iframe"
+              height="260"
+            ></iframe>
+            <p class="doc-note">
+              ※PDFが表示されない場合は
+              <a href="docs/teacher_progress.pdf" target="_blank" rel="noopener noreferrer">こちら</a>
+              から直接開いてほしい。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Process（仕事の進め方） -->
+      <section id="process" class="fade">
+        <h2>Process（企画や課題に向き合うときの流れ）</h2>
+        <p class="section-description">
+          何か企画を任されたとき、自分がどのような順番で考え、動くのかを整理した。
+          学園祭ライブや家庭教師で実際にとってきた行動に近い。
+        </p>
+        <div class="process-steps">
+          <div class="card">
+            <div class="process-step-number">Step 1</div>
+            <div class="process-step-title">「本当に解きたい問い」を言葉にする</div>
+            <div class="process-step-body">
+              まず、「何を達成できたら、この企画は成功と言えるのか」を言語化する。
+              学園祭ライブの場合、「赤字を消す」だけでなく
+              「大学全体の価値を上げるような熱狂をつくる」というレベルまで問いを引き上げた。
+            </div>
+          </div>
+          <div class="card">
+            <div class="process-step-number">Step 2</div>
+            <div class="process-step-title">制約条件と現実的なラインを把握する</div>
+            <div class="process-step-body">
+              使える予算・人員・時間・設備などの制約を整理し、「ここは絶対に動かせない」「ここは工夫次第で変えられる」という線を引く。
+              そのうえで、実現可能な最大値を探る。
+            </div>
+          </div>
+          <div class="card">
+            <div class="process-step-number">Step 3</div>
+            <div class="process-step-title">数字と感情の両面からアイデアを出す</div>
+            <div class="process-step-body">
+              ターゲットやKPIなどの数字面の仮説と、「どんな感情を生みたいか」という感覚面の仮説を行き来しながら案を出す。
+              大きな方向性が決まったら、必要なタスクを細かく分解する。
+            </div>
+          </div>
+          <div class="card">
+            <div class="process-step-number">Step 4</div>
+            <div class="process-step-title">プロトタイプをつくり、早めに検証する</div>
+            <div class="process-step-body">
+              完成度を求めすぎず、仮のクリエイティブや構成案を早めに出して反応を見る。
+              学園祭では、複数パターンの広告文や画像をテストし、クリック率と反応コメントから方向性を絞り込んだ。
+            </div>
+          </div>
+          <div class="card">
+            <div class="process-step-number">Step 5</div>
+            <div class="process-step-title">本番設計と「余白」の確保</div>
+            <div class="process-step-body">
+              本番に向けて導線・タイムテーブル・役割分担を固める一方で、
+              当日の予期せぬトラブルに備えた「余白」も必ず確保する。
+              代替案や中止基準をあらかじめ決めておき、判断を迷わないようにしている。
+            </div>
+          </div>
+          <div class="card">
+            <div class="process-step-number">Step 6</div>
+            <div class="process-step-title">事後の振り返りと次回への翻訳</div>
+            <div class="process-step-body">
+              終わったあと、数字と感想の両面から振り返りを行う。
+              良かった点・悪かった点を「次に再現・改善できる単位」にまで分解し、
+              ノウハウとして蓄積していくことを意識している。
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills（スキルセット） -->
+      <section id="skills" class="fade">
+        <h2>Skills & Tools（スキルセット）</h2>
+        <p class="section-description">
+          実務経験はまだこれからであるが、学生の範囲で触れてきたスキルやツールを整理した。
+          「何ができるか」よりも「何に興味を持って深掘りしているか」を中心に書いている。
+        </p>
+        <div class="skills-columns">
+          <div class="card">
+            <div class="card-title">企画・コンテンツ関連</div>
+            <ul class="skills-list">
+              <li>・学園祭アーティストライブの企画立案・構成づくり</li>
+              <li>・教育×エンタメ企画の企画書作成（番組フォーマット案など）</li>
+              <li>・ターゲット設定・ペルソナ設計・コンセプトメイク</li>
+              <li>・イベント導線設計・タイムテーブル作成</li>
+            </ul>
+          </div>
+          <div class="card">
+            <div class="card-title">分析・ロジカルスキル</div>
+            <ul class="skills-list">
+              <li>・基本的な統計・データ可視化（Excel / スプレッドシート）</li>
+              <li>・SNS広告の配信結果を用いた簡易な分析</li>
+              <li>・高校数学・大学初年次レベルの物理・微積分の理解</li>
+              <li>・論理的な文章構成（レポート・ES・企画書）</li>
+            </ul>
+          </div>
+          <div class="card">
+            <div class="card-title">制作・ツール関連</div>
+            <ul class="skills-list">
+              <li>・ギター／ボーカル／簡単なDTM（GarageBandなど）</li>
+              <li>・簡単なWebサイト制作（HTML / CSS / GitHub Pages）</li>
+              <li>・プレゼン資料作成（PowerPoint / Keynote）</li>
+              <li>・画像編集（Canva などを用いたサムネイル・OGP作成）</li>
+            </ul>
           </div>
         </div>
       </section>
 
       <!-- Vision -->
-      <section id="vision">
+      <section id="vision" class="fade">
         <h2>Vision / Will</h2>
         <p class="section-description">
           なぜエンタメ業界を志望しているのか、どのようなことを実現したいのかの「芯」の部分をまとめた。
@@ -541,15 +1210,54 @@
           <p>
             工学で培った論理的な思考と、音楽や学園祭で鍛えられた現場感覚・エンタメ感覚を掛け合わせることで、
             視聴者の知的好奇心をくすぐりつつ、人生の選択肢を広げるようなコンテンツを届けていきたいと考えている。
+            そのために、まずは一視聴者として、そして一企画者・一制作者として、自分なりの「面白い」の軸を磨き続けたい。
           </p>
         </div>
       </section>
 
+      <!-- FAQ -->
+      <section id="faq" class="fade">
+        <h2>FAQ（想定される質問と、その答え）</h2>
+        <p class="section-description">
+          実際の面談や選考で聞かれそうなことを先回りして書いた。
+          深掘りしてもらえると、より具体的に話せる。
+        </p>
+        <div class="card">
+          <div class="faq-item">
+            <div class="faq-q">Q. なぜ工学部からテレビ・エンタメ業界を志望しているのか？</div>
+            <div class="faq-a">
+              A. 工学を学ぶ中で、「難しいことをどう分かりやすく伝えるか」という課題に何度も向き合ってきた。
+              そのたびに、授業や教科書の外側にある「伝え方」の重要性を感じた。
+              一方で、学園祭やバンド活動を通じて、「人の感情を動かす場をつくる楽しさ」を強く実感した。
+              この二つを掛け合わせる場所として、テレビや配信といったマスメディアの現場に挑戦したいと考えるようになった。
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">Q. エンジニアとしての道ではなく、なぜ企画・編成なのか？</div>
+            <div class="faq-a">
+              A. 自分は、技術そのものを極めること以上に、「技術や知識をどう社会と接続するか」を考えることが好きである。
+              大学での研究よりも、学園祭や家庭教師などの「人の行動が変わる場づくり」に熱中してきた。
+              その経験から、企画・編成のように、全体の方向性を設計し、さまざまな専門性をつなぐ仕事に一番やりがいを感じると考えている。
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">Q. どのような番組や企画に関わってみたいか？</div>
+            <div class="faq-a">
+              A. 子どもや若者が、「自分も何かに挑戦してみたい」と思えるきっかけになるような企画に関わりたい。
+              例えば、科学の実験や社会課題を、笑いと物語を交えながら伝える番組や、
+              視聴者の挑戦をドキュメンタリー的に追う企画などに興味がある。
+              ただし、ジャンルにこだわりすぎず、まずは既存番組の一員として学ばせてもらいながら、自分の軸を鍛えたい。
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- Contact -->
-      <section id="contact">
+      <section id="contact" class="fade">
         <h2>Contact / Links</h2>
         <p class="section-description">
           選考や面談の際などに、追加で何か資料が必要であれば、以下から連絡してほしい。
+          このサイトに載せていない生のデータや、裏側のエピソードも喜んで共有する。
         </p>
         <div class="contact-box">
           <p>
@@ -557,17 +1265,9 @@
             X：<a href="https://x.com/Taki_Renya" target="_blank" rel="noopener noreferrer">@Taki_Renya</a><br>
             GitHub：<a href="https://github.com/akimiya10p-eng" target="_blank" rel="noopener noreferrer">https://github.com/akimiya10p-eng</a>
           </p>
-          <!--
-          ここにESや企画書PDFを置きたい場合は、docs/ 以下にPDFをアップしてリンクを足すとよい。
-
-          <p>
-            主な資料：<br>
-            ・<a href="docs/ES_miyazaki.pdf" target="_blank">自己PR・ガクチカまとめ（PDF）</a><br>
-            ・<a href="docs/plan_tv_entertainment.pdf" target="_blank">教育×エンタメ企画案（PDF）</a>
-          </p>
-          -->
           <p style="font-size:12px; color:var(--text-sub); margin-top:8px;">
-            ※メールアドレスや各種リンクは、実際のものに差し替えて使用してほしい。
+            ※このサイトに掲載している写真・動画・資料について、詳細な説明が必要であれば面談時にぜひ質問してほしい。
+            ESでは伝えきれない部分を、できるだけ具体的にお話ししたいと考えている。
           </p>
         </div>
       </section>
@@ -579,7 +1279,19 @@
   </div>
 
   <script>
+    // 年表示
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    // スクロール時フェードイン
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll(".fade").forEach(el => observer.observe(el));
   </script>
 </body>
 </html>
